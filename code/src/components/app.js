@@ -22,7 +22,7 @@ class App extends React.Component {
     if (this.state.radioStations.length > 0) {
       return (
         <div>
-          <h1>Sveriges Radio Player 📻</h1>
+          <div className="headerLogo"> <img src="./Sverigesradio_srgb.png" alt="Channel logo" /> </div>
           <div className="allChannelsContainer">
             {this.state.radioStations.map((channels) => {
               return <RadioStation
@@ -31,7 +31,7 @@ class App extends React.Component {
                 channeltype={channels.channeltype}
                 audio={channels.liveaudio.url}
                 tagline={channels.tagline}
-                color={channels.color}/>
+                color={channels.color} />
             })}
           </div>
         </div>
