@@ -25,6 +25,11 @@ p{
   font-size: 14px;
 }
 
+.audioplayer{
+  bottom: 0;
+
+}
+
 .allChannelsContainer{
   box-sizing: border-box;
   display: flex;

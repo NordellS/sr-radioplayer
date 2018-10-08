@@ -19,23 +19,28 @@ class App extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        <h1>Sveriges Radio Player 📻</h1>
-        <div className="allChannelsContainer">
-          {this.state.radioStations.map((channels) => {
-            return <RadioStation
-              name={channels.name}
-              image={channels.image}
-              channeltype={channels.channeltype}
-              audio={channels.liveaudio.url}
-              tagline={channels.tagline}
-              color={channels.color}/>
-          })}
+    if (this.state.radioStations.length > 0) {
+      return (
+        <div>
+          <h1>Sveriges Radio Player 📻</h1>
+          <div className="allChannelsContainer">
+            {this.state.radioStations.map((channels) => {
+              return <RadioStation
+                name={channels.name}
+                image={channels.image}
+                channeltype={channels.channeltype}
+                audio={channels.liveaudio.url}
+                tagline={channels.tagline}
+                color={channels.color}/>
+            })}
+          </div>
         </div>
-      </div>
-    )
+      )
+    } else {
+      return <div> Loading...</div>
+    }
   }
+
 }
 
 export default App
