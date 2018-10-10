@@ -4,12 +4,11 @@ class RadioStation extends React.Component {
 
   render() {
     const channelColor = {
-      backgroundColor: {
-        backgroundColor: `#${this.props.color}`
-      }
+      backgroundColor: `#${this.props.color}`
     }
+
     return (
-      <div className="channelContainer" style={channelColor.backgroundColor}>
+      <div className="channelContainer" style={channelColor}>
         <div className="channelLogo"> <img src={this.props.image} alt="Channel logo" /> </div>
         <div className="channelContainer-text">
           <h2>{this.props.name}</h2>
